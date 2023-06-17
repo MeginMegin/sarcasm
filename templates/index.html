@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sarcasm Classification</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbit&display=swap');
+        body {
+            font-family: 'Orbit', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f5f7;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        
+        .container {
+            background-color: #f3f5f7;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 8px 8px 20px #dcdde1, -8px -8px 20px #ffffff;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            background-color: #e4e8ec;
+            border-radius: 10px;
+            box-shadow: inset 6px 6px 10px #cbced1, inset -6px -6px 10px #ffffff;
+        }
+        
+        input[type="submit"] {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            color: #4d4e50;
+            background-color: #ffffff;
+           
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 8px 8px 20px #dcdde1, -8px -8px 20px #ffffff;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #4d4e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sarcasm Classification</h1>
+        <form action="/predict" method="POST">
+            <input type="text" name="text" placeholder="Enter some text to classify" required>
+            <input type="submit" value="Submit">
+            <p>Predicted class: {{ prediction }}</p>
+        </form>
+       
+    </div>
+   
+</body>
+</html>
